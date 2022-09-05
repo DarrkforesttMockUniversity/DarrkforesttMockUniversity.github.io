@@ -1,472 +1,430 @@
-
-
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=auto>
-
-
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="John Doe">
-  <meta name="keywords" content="">
-  
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary_large_image">
-  
-  
-  
-  <title>Hexo</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
-
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
-
-
-  
+    <title>Hexo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
 <meta name="generator" content="Hexo 6.2.0"></head>
 
-
 <body>
-  
-
-  <header>
-    
-
-<div class="header-inner" style="height: 100vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
-    </a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                Home
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                Archives
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                Categories
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                Tags
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                About
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
-          
-        </div>
-
-        
-      </div>
-
-      
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
-      
-    </div>
-  </div>
-</div>
-
-</div>
-
-  </header>
-
-  <main>
-    
-      <div class="container nopadding-x-md">
-        <div id="board"
-          style="margin-top: 0">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/09/05/your-resume/" target="_self">
-          your-resume
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/09/05/your-resume/" target="_self">
+    <div id="resume">
+    <header id="header" class="clear">
         <div>
-          
+            <h1 class="name">YOUR NAME</h1>
+            <h2 class="label">Your Job Title</h2>
         </div>
-      </a>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-09-05 15:03" pubdate>
-              2022-09-05
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/08/18/pig/" target="_self">
-          pig
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/08/18/pig/" target="_self">
-        <div>
-          我的第一篇博客文章：
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-08-18 19:44" pubdate>
-              2022-08-18
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/08/16/page/" target="_self">
-          page
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/08/16/page/" target="_self">
-        <div>
-          
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-08-16 14:18" pubdate>
-              2022-08-16
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/08/16/hello-world/" target="_self">
-          Hello World
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/08/16/hello-world/" target="_self">
-        <div>
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-08-16 14:15" pubdate>
-              2022-08-16
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+        <span class="location">
+            
+            <span class="address">Your Address,</span>
+            
+            <span class="postalCode">0123654,</span>
+            
+            <span class="city">Your City,</span>
+            
+            <span class="region">State/Region,</span>
+            
+            <span class="countryCode">US,</span>
+            
+        </span>
 
 
-
-
-
-              </div>
+        <div id="contact">
+            
+            <div ">
+                <span class=" fa fa-external-link"></span>
+                <a target="_blank" href="your-website.com">your-website.com</a>
             </div>
-          </div>
+            
+            <div ">
+                <span class=" fa fa-envelope"></span>
+                <a target="_blank" href="youremail@example.com">youremail@example.com</a>
+            </div>
+            
+            <div ">
+                <span class=" fa fa-phone-square"></span>
+                <a target="_blank" href="your-phone-num">your-phone-num</a>
+            </div>
+            
         </div>
-      </div>
-    
 
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        <div id="profiles">
+            
+            <div class="item">
+                <div class="username">
+                    <span class="fa fa-linkedin social"></span>
+                    <span class="url">
+                        <a target="_blank" href="https://linkedin.com/">your-linkedin</a>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="username">
+                    <span class="fa fa-github social"></span>
+                    <span class="url">
+                        <a target="_blank" href="https://github.com/">your-github</a>
+                    </span>
+                </div>
+            </div>
+            
         </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
+    </header>
+
+    <section class="section main-summary">
+        <section>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </section>
+    </section>
+
+    <section class="section margin1">
+        <header>
+            <h2 class="section-title">Skills</h2>
+        </header>
+        <section id="skills">
+            
+            <div class="item">
+                <h3 class="name">
+                    Skill Group 1
+                </h3>
+
+                <div class="level advanced">
+                    <em>ADVANCED</em>
+                    <div class="bar"></div>
+                </div>
+                <ul class="keywords">
+                    
+                    <li>Lorem</li>
+                    
+                    <li>Ipsum</li>
+                    
+                    <li>Dolor</li>
+                    
+                    <li>Sit</li>
+                    
+                    <li>Amet</li>
+                    
+                </ul>
+            </div>
+            
+            <div class="item">
+                <h3 class="name">
+                    Skill Group 2
+                </h3>
+
+                <div class="level intermediate">
+                    <em>INTERMEDIATE</em>
+                    <div class="bar"></div>
+                </div>
+                <ul class="keywords">
+                    
+                    <li>Consectetur</li>
+                    
+                    <li>Adipiscing</li>
+                    
+                    <li>Elit</li>
+                    
+                </ul>
+            </div>
+            
+            <div class="item">
+                <h3 class="name">
+                    Skill Group 3
+                </h3>
+
+                <div class="level beginner">
+                    <em>BEGINNER</em>
+                    <div class="bar"></div>
+                </div>
+                <ul class="keywords">
+                    
+                    <li>Sed do</li>
+                    
+                    <li>Eiusmod</li>
+                    
+                    <li>Tempor</li>
+                    
+                    <li>Incididunt</li>
+                    
+                </ul>
+            </div>
+            
+        </section>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="section-title">Work Experience <span
+                    class="item-count">(3)</span></h2>
+        </header>
+
+        
+        <section class="work-item">
+
+            <input id="work-item-1" type="checkbox" class="toggle-item" checked="checked">
+            <label for="work-item-1"></label>
+
+            <header>
+                <div class="position">Job Title 1</div>
+                <div class="company">Your 1st, Inc.</div>
+                <div class="date">Apr 2016 - Now</div>
+            </header>
+
+            <span class="website">
+                <a target="_blank" href="website.com">website.com</a>
+            </span>
+            <div class="item" id="work-item">
+                <div class="summary">
+                    <p></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p></p>
+                </div>
+                <ul class="highlights">
+                    
+                    <li>
+                        <p>Optimized an algorithm that holds the current world record for Weisman Scores</p>
+                    </li>
+                    
+                    <li>
+                        <p>Hilight 2</p>
+                    </li>
+                    
+                    <li>
+                        <p>Hilight 3</p>
+                    </li>
+                    
+
+                </ul>
+            </div>
+        </section>
+        
+        <section class="work-item">
+
+            <input id="work-item-2" type="checkbox" class="toggle-item" checked="checked">
+            <label for="work-item-2"></label>
+
+            <header>
+                <div class="position">Job Title 2</div>
+                <div class="company">Your 2nd, Inc.</div>
+                <div class="date">Apr 2013 - Mar 2016</div>
+            </header>
+
+            <span class="website">
+                <a target="_blank" href="website.com">website.com</a>
+            </span>
+            <div class="item" id="work-item">
+                <div class="summary">
+                    <p></p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p></p>
+                </div>
+                <ul class="highlights">
+                    
+                    <li>
+                        <p>Hilight 1</p>
+                    </li>
+                    
+                    <li>
+                        <p>Optimized an algorithm that holds the current world record for Weisman Scores</p>
+                    </li>
+                    
+
+                </ul>
+            </div>
+        </section>
+        
+        <section class="work-item">
+
+            <input id="work-item-3" type="checkbox" class="toggle-item" checked="checked">
+            <label for="work-item-3"></label>
+
+            <header>
+                <div class="position">Job Title 3</div>
+                <div class="company">Your 3rd Co, Ltd.</div>
+                <div class="date">Dec 2011 - Mar 2012</div>
+            </header>
+
+            <span class="website">
+                <a target="_blank" href="website.com">website.com</a>
+            </span>
+            <div class="item" id="work-item">
+                <div class="summary">
+                    <p></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p></p>
+                </div>
+                <ul class="highlights">
+                    
+
+                </ul>
+            </div>
+        </section>
+        
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="section-title">Education <span class="item-count">(1)</span></h2>
+        </header>
+
+        <section id="education">
+            
+            <section class="education-item">
+                <header>
+                    <div class="header">
+                        <div class="course">
+                            Masters Information Technology
+                        </div>
+                        <div class="institution">
+                            Your First University
+                        </div>
+                        <div class="date">
+                            Jul 2011 - Dec 2012
+                        </div>
+                    </div>
+                </header>
+
+                <div class="item">
+                    <div class="location">
+                        <strong class="fa fa-map-marker"></strong> <span>Consectetur adipiscing elit</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="education-item">
+                <header>
+                    <div class="header">
+                        <div class="course">
+                            Masters Information Technology
+                        </div>
+                        <div class="institution">
+                            Your Second University
+                        </div>
+                        <div class="date">
+                            Aug 2007 - Jun 2011
+                        </div>
+                    </div>
+                </header>
+
+                <div class="item">
+                    <div class="location">
+                        <strong class="fa fa-map-marker"></strong> <span>Ut enim ad minim veniam</span>
+                    </div>
+                </div>
+            </section>
+            
+
+        </section>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="section-title">Projects</h2>
+        </header>
+        
+        <section id="project">
+            <section class="project-item">
+                <input id="project-item-1" type="checkbox" class="toggle-item" checked="checked">
+                <label for="project-item-1"></label>
+
+                <header>
+                    <div class="header">
+                        <div class="title">
+                            Project Name 1
+                        </div>
+                        <div class="contribution">
+                            Contributor.
+                        </div>
+                        <div class="date">
+                            Jul 2011 - Dec 2012
+                        </div>
+                    </div>
+
+                </header>
+
+                <div class="item">
+                    <div class="summary">
+                        <p></p>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p></p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+        <section id="project">
+            <section class="project-item">
+                <input id="project-item-2" type="checkbox" class="toggle-item" checked="checked">
+                <label for="project-item-2"></label>
+
+                <header>
+                    <div class="header">
+                        <div class="title">
+                            Project Name 2
+                        </div>
+                        <div class="contribution">
+                            Creator and maintainer.
+                        </div>
+                        <div class="date">
+                            Aug 2007 - Jun 2011
+                        </div>
+                    </div>
+
+                </header>
+
+                <div class="item">
+                    <div class="summary">
+                        <p></p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p></p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+    </section>
+
+    <section class="section margin1">
+        <header>
+            <h2 class="section-title">Languages</h2>
+        </header>
+        <section id="languages">
+            
+            <div class="display">
+                <h3 class="language">
+                    English
+                </h3>
+                <div class="item">
+                    <div class="level fluency fluent">
+                        <em>FLUENT</em>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="display">
+                <h3 class="language">
+                    Hindi
+                </h3>
+                <div class="item">
+                    <div class="level fluency native speaker">
+                        <em>NATIVE SPEAKER</em>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </section>
+
 </div>
-
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-    </div>
-  
-  
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  <script  src="/js/local-search.js" ></script>
-
-
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
-  </noscript>
+    <footer>
+  Made with <i class="fa fa-heart aria-hidden=" true=""></i> by <a href="https://github.com/harendra1993/vita" target="_blank" rel="noopener">Harendra Singh</a> <span class="print">( <a href="javascript:window.print()">PDF</a> )</span>
+</footer>
 </body>
+
 </html>
